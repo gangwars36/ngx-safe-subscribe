@@ -1,0 +1,40 @@
+{
+  "name": "ngx-safe-subscribe-cli",
+  "version": "0.1.3",
+  "description": "Scan an Angular/RxJS codebase for unmanaged subscriptions (potential memory leaks). Reports file + line number + a total count. CI-friendly.",
+  "bin": {
+    "ngx-safe-subscribe": "dist/cli.js"
+  },
+  "main": "dist/scan.js",
+  "types": "dist/scan.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "scan": "npm run build && node dist/cli.js scan ./sample",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "angular",
+    "rxjs",
+    "memory-leak",
+    "unsubscribe",
+    "subscription",
+    "lint",
+    "static-analysis",
+    "cli"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "ts-morph": "^22.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}

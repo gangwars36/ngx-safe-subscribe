@@ -1,0 +1,34 @@
+{
+  "name": "ngx-safe-subscribe",
+  "version": "0.1.1",
+  "description": "Zero-boilerplate RxJS auto-unsubscribe for Angular: an untilDestroyed() operator and an @AutoUnsubscribe() decorator. Works with Angular 12+.",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "angular",
+    "rxjs",
+    "unsubscribe",
+    "memory-leak",
+    "takeUntil",
+    "decorator",
+    "ngOnDestroy"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/core": ">=12.0.0",
+    "rxjs": ">=6.6.0"
+  },
+  "devDependencies": {
+    "rxjs": "^7.8.0",
+    "typescript": "^5.4.0"
+  }
+}
